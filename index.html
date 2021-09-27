@@ -1,15 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>~ Forest Bath ~</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap">
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
+
 <body>
-    <div class="slidecontainer">
-        <input type="range" min="1" max="100" value="50" class="slider">
+    <div class="header">
+        <div class="nav-right">
+            <ul>
+                <li>
+                    <div id="about">About the project</div>
+                </li>
+                <li>
+                    <img src="assets/sound-on.png" alt="Sound on or off">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="image">
+        <h1>
+            <img src="assets/logo.png" alt="Forest Bath">
+        </h1>
+        <div class="forestimage">
+            <img src="assets/tree.png" alt="Trees swaying the wind">
+        </div>
+    </div>
+
+    <div class="audio">
+        <div class="audio-player audio-player-0">
+            <span class="audio-player-title">Ambience</span>
+            <div class="audio-controls">
+                <input type="range" min="1" max="100" value="50" class="slider">
+            </div>
+        </div>
+
+        <div class="audio-player audio-player-1">
+            <span class="audio-player-title">Wind</span>
+            <div class="audio-controls">
+                <input type="range" min="1" max="100" value="50" class="slider">
+            </div>
+        </div>
+
+        <div class="audio-player audio-player-2">
+            <span class="audio-player-title">Insects</span>
+            <div class="audio-controls">
+                <input type="range" min="1" max="100" value="50" class="slider">
+            </div>
+        </div>
+
+        <div class="audio-player audio-player-3">
+            <span class="audio-player-title">Birds</span>
+            <div class="audio-controls">
+                <input type="range" min="1" max="100" value="50" class="slider">
+            </div>
+        </div>
+
+        <div class="audio-player audio-player-4">
+            <span class="audio-player-title">Thunder</span>
+            <div class="audio-controls">
+                <input type="range" min="1" max="100" value="50" class="slider">
+            </div>
+        </div>
+
+        <div class="audio-player audio-player-5">
+            <span class="audio-player-title">People</span>
+            <div class="audio-controls">
+                <input type="range" min="1" max="100" value="50" class="slider">
+            </div>
+        </div>
+
+        <div class="audio-player audio-player-6">
+            <span class="audio-player-title">Rain</span>
+            <div class="audio-controls">
+                <input type="range" min="1" max="100" value="50" class="slider">
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
