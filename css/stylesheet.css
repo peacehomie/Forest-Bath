@@ -1,6 +1,6 @@
 html {
     height: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 body {
@@ -10,6 +10,8 @@ body {
     font-size: 16px;
     font-weight: lighter;
     color: white;
+    animation: fadeIn;
+    animation-duration: 1.5s;
 }
 
 img {
@@ -17,18 +19,66 @@ img {
     height: auto;
 }
 
-a:link {
-    text-decoration: none; 
-  }
+/*a:link {
+    text-decoration: none;
+}
 
 a:hover {
     color: white;
     text-decoration: underline;
-  } 
+}
 
 a:visited {
     color: white;
-}  
+}*/
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.801);
+    z-index: 2;
+    animation: fadeIn;
+    animation-duration: .5s;
+}
+
+#overlaytext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+#overlaytext h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+#overlaytext h2 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+#overlaytext p {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: lighter;
+}
+
+
 
 .header {
     width: 100%;
@@ -49,6 +99,12 @@ a:visited {
     padding-right: 1em;
     padding-left: 1em;
     border: 1px solid white;
+}
+
+#about a:hover {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #soundtoggle {
@@ -401,6 +457,29 @@ ul li {
         right: 50%;
         transform: translateX(75px);
     }
+    
+    #overlaytext h1 {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 20px;
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+    }
+    
+    #overlaytext h2 {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 14px;
+        font-size: 1.4rem;
+        font-weight: 100;
+        text-align: center;
+    }
+    
+    #overlaytext p {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 12px;
+        font-size: 1.2rem;
+        font-weight: lighter;
+    }
 
     /*.playbutton {
   position:absolute;
@@ -480,6 +559,29 @@ ul li {
         top: 80%;
         right: 50%;
         transform: translateX(90px);
+    }
+
+    #overlaytext h1 {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 14px;
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-align: center;
+    }
+    
+    #overlaytext h2 {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 12px;
+        font-size: 1.2rem;
+        font-weight: 100;
+        text-align: center;
+    }
+    
+    #overlaytext p {
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 10px;
+        font-size: 1rem;
+        font-weight: lighter;
     }
 
     /*.playbutton {

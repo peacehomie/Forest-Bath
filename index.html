@@ -9,19 +9,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap">
+    
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
+    <div id="overlay" onclick="off()">
+        <div id="overlaytext">
+            <h1>About Forest Bath</h1>
+            <h2><em>'shinrin-yoku'</em></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+
     <div class="header">
         <div class="nav-right">
             <ul>
                 <li>
-                    <div id="about"><a href="https://www.google.se" target="_blank">About the project</a></div>
+                    <div id="about"><a onclick="on()">About the project</a></div>
                 </li>
                 <li>
                     <div id="soundtoggle">
-                        <img src="assets/sound-on.png" width="50" height="50" alt="Tune in, or tune out">
+                        <img src="images/sound-on.png" width="50" height="50" alt="Tune in, or tune out">
                     </div>
                 </li>
             </ul>
@@ -30,10 +47,10 @@
 
     <div class="image">
         <h1>
-            <img src="assets/logo.png" alt="Forest Bath">
+            <img src="images/logo.png" alt="Forest Bath">
         </h1>
         <div class="forestimage">
-            <img src="assets/tree.png" alt="Trees swaying the wind">
+            <img src="images/tree.png" alt="Trees swaying the wind">
         </div>
     </div>
 
@@ -80,6 +97,8 @@
             </div>
         </div>
     </div>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
