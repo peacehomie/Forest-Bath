@@ -9,13 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap">
-    
+
+    <script src="js/jquery.min.js"></script>
+
     <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
-    <div id="overlay" onclick="off()">
+    <div id="overlay" onclick="overlayOff()">
         <div id="overlaytext">
             <h1>About Forest Bath</h1>
             <h2><em>'shinrin-yoku'</em></h2>
@@ -34,18 +36,23 @@
         <div class="nav-right">
             <ul>
                 <li>
-                    <div id="about"><a onclick="on()">About the project</a></div>
+                    <a id="about" onclick="overlayOn()">About the project</a>
                 </li>
                 <li>
-                    <div id="soundtoggle">
-                        <img src="images/sound-on.png" width="50" height="50" alt="Tune in, or tune out">
+                    <a href="#" id="playbutton" style="display: none;" onclick="playz();" class="soundtoggle mute">
+                        <span class="sr-only">Tune in, or tune out</span>
+                    </a>
+                </li>
+                <li id="loading">
+                    <div id="loading">
+                        Loading ...
                     </div>
                 </li>
             </ul>
         </div>
     </div>
 
-    <div class="image">
+    <div class="logo">
         <h1>
             <img src="images/logo.png" alt="Forest Bath">
         </h1>
@@ -57,48 +64,242 @@
     <div class="audio">
         <div class="audio-player audio-player-0">
             <div class="audio-controls">
-                <input type="range" min="1" max="100" value="50" class="slider">
+                <input autocomplete="off" type="range" step="0.05" min="0" max="1" value="0" class="slider"
+                    oninput="audio1.changeVolume(this);">
             </div>
         </div>
 
         <div class="audio-player audio-player-1">
             <div class="audio-controls">
-                <input type="range" min="1" max="100" value="50" class="slider">
+                <input autocomplete="off" type="range" step="0.05" min="0" max="1" value="0" class="slider"
+                    oninput="audio2.changeVolume(this);">
             </div>
         </div>
 
         <div class="audio-player audio-player-2">
             <div class="audio-controls">
-                <input type="range" min="1" max="100" value="50" class="slider">
+                <input autocomplete="off" type="range" step="0.05" min="0" max="1" value="0" class="slider"
+                    oninput="audio3.changeVolume(this);">
             </div>
         </div>
 
         <div class="audio-player audio-player-3">
             <div class="audio-controls">
-                <input type="range" min="1" max="100" value="50" class="slider">
+                <input autocomplete="off" type="range" step="0.05" min="0" max="1" value="0" class="slider"
+                    oninput="audio4.changeVolume(this);">
             </div>
         </div>
 
         <div class="audio-player audio-player-4">
             <div class="audio-controls">
-                <input type="range" min="1" max="100" value="50" class="slider">
+                <input autocomplete="off" type="range" step="0.05" min="0" max="1" value="0" class="slider"
+                    oninput="audio5.changeVolume(this);">
             </div>
         </div>
 
         <div class="audio-player audio-player-5">
             <div class="audio-controls">
-                <input type="range" min="1" max="100" value="50" class="slider">
+                <input autocomplete="off" type="range" step="0.05" min="0" max="1" value="0" class="slider"
+                    oninput="audio6.changeVolume(this);">
             </div>
         </div>
 
         <div class="audio-player audio-player-6">
             <div class="audio-controls">
-                <input type="range" min="1" max="100" value="50" class="slider">
+                <input autocomplete="off" type="range" step="0.05" min="0" max="1" value="0.5" class="slider"
+                    oninput="audio7.changeVolume(this);">
             </div>
         </div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/buffer-loader.js"></script>
+    <script type="text/javascript">
+        var context, bufferLoader, bufferList;
+        window.onload = init;
+        var everythingready = !1,
+            isplaying = !1;
+
+        function init() {
+            window.AudioContext = window.AudioContext || window.webkitAudioContext, context = new AudioContext, (
+                bufferLoader = new BufferLoader(context, ["sounds/pad.m4a", "sounds/ocean.m4a", "sounds/seep.m4a", "sounds/pokrov.m4a", "sounds/brus.m4a", "sounds/bird.m4a", "sounds/skog.m4a"],
+                    finishedLoading)).load()
+        }
+
+        function finishedLoading(t) {
+            $("#loading").hide(), $("#playbutton").show(), everythingready = !0, bufferList = t
+        }
+
+        function playz() {
+            isplaying ? ($("#playbutton").addClass("mute"), isplaying = !1) : ($("#playbutton").removeClass("mute"),
+                    isplaying = !0), audio1.toggle(), audio2.toggle(), audio3.toggle(), audio4.toggle(), audio5
+            .toggle(), audio6.toggle(), audio7.toggle()
+        }
+        var audio1 = {
+                playing: !1,
+                gainNode: null,
+                play: function () {
+                    context.createGain || (context.createGain = context.createGainNode), this.gainNode = context
+                        .createGain();
+                    var t = context.createBufferSource();
+                    t.buffer = bufferList[0], t.connect(this.gainNode), this.gainNode.connect(context.destination),
+                        this.gainNode.gain.value = 0, t.loop = !0, t.start || (t.start = t.noteOn), t.start(0),
+                        this.source = t
+                },
+                changeVolume: function (t) {
+                    var e = t.value;
+                    parseInt(t.value), parseInt(t.max);
+                    this.gainNode.gain.value = e
+                },
+                stop: function () {
+                    this.source.stop || (this.source.stop = source.noteOff), this.source.stop(0)
+                },
+                toggle: function () {
+                    this.playing ? this.stop() : this.play(), this.playing = !this.playing
+                }
+            },
+            audio2 = {
+                playing: !1,
+                gainNode: null,
+                play: function () {
+                    context.createGain || (context.createGain = context.createGainNode), this.gainNode = context
+                        .createGain();
+                    var t = context.createBufferSource();
+                    t.buffer = bufferList[1], t.connect(this.gainNode), this.gainNode.connect(context.destination),
+                        this.gainNode.gain.value = 0, t.loop = !0, t.start || (t.start = t.noteOn), t.start(0),
+                        this.source = t
+                },
+                changeVolume: function (t) {
+                    var e = t.value;
+                    parseInt(t.value), parseInt(t.max);
+                    this.gainNode.gain.value = e
+                },
+                stop: function () {
+                    this.source.stop || (this.source.stop = source.noteOff), this.source.stop(0)
+                },
+                toggle: function () {
+                    this.playing ? this.stop() : this.play(), this.playing = !this.playing
+                }
+            },
+            audio3 = {
+                playing: !1,
+                gainNode: null,
+                play: function () {
+                    context.createGain || (context.createGain = context.createGainNode), this.gainNode = context
+                        .createGain();
+                    var t = context.createBufferSource();
+                    t.buffer = bufferList[2], t.connect(this.gainNode), this.gainNode.connect(context.destination),
+                        this.gainNode.gain.value = 0, t.loop = !0, t.start || (t.start = t.noteOn), t.start(0),
+                        this.source = t
+                },
+                changeVolume: function (t) {
+                    var e = t.value;
+                    parseInt(t.value), parseInt(t.max);
+                    this.gainNode.gain.value = e
+                },
+                stop: function () {
+                    this.source.stop || (this.source.stop = source.noteOff), this.source.stop(0)
+                },
+                toggle: function () {
+                    this.playing ? this.stop() : this.play(), this.playing = !this.playing
+                }
+            },
+
+        
+            audio4 = {
+                playing: !1,
+                gainNode: null,
+                play: function () {
+                    context.createGain || (context.createGain = context.createGainNode), this.gainNode = context
+                        .createGain();
+                    var t = context.createBufferSource();
+                    t.buffer = bufferList[3], t.connect(this.gainNode), this.gainNode.connect(context.destination),
+                        this.gainNode.gain.value = 0, t.loop = !0, t.start || (t.start = t.noteOn), t.start(0),
+                        this.source = t
+                },
+                changeVolume: function (t) {
+                    var e = t.value;
+                    parseInt(t.value), parseInt(t.max);
+                    this.gainNode.gain.value = e
+                },
+                stop: function () {
+                    this.source.stop || (this.source.stop = source.noteOff), this.source.stop(0)
+                },
+                toggle: function () {
+                    this.playing ? this.stop() : this.play(), this.playing = !this.playing
+                }
+            },
+            audio5 = {
+                playing: !1,
+                gainNode: null,
+                play: function () {
+                    context.createGain || (context.createGain = context.createGainNode), this.gainNode = context
+                        .createGain();
+                    var t = context.createBufferSource();
+                    t.buffer = bufferList[4], t.connect(this.gainNode), this.gainNode.connect(context.destination),
+                        this.gainNode.gain.value = 0, t.loop = !0, t.start || (t.start = t.noteOn), t.start(0),
+                        this.source = t
+                },
+                changeVolume: function (t) {
+                    var e = t.value;
+                    parseInt(t.value), parseInt(t.max);
+                    this.gainNode.gain.value = e
+                },
+                stop: function () {
+                    this.source.stop || (this.source.stop = source.noteOff), this.source.stop(0)
+                },
+                toggle: function () {
+                    this.playing ? this.stop() : this.play(), this.playing = !this.playing
+                }
+            },
+            audio6 = {
+                playing: !1,
+                gainNode: null,
+                play: function () {
+                    context.createGain || (context.createGain = context.createGainNode), this.gainNode = context
+                        .createGain();
+                    var t = context.createBufferSource();
+                    t.buffer = bufferList[5], t.connect(this.gainNode), this.gainNode.connect(context.destination),
+                        this.gainNode.gain.value = 0, t.loop = !0, t.start || (t.start = t.noteOn), t.start(0),
+                        this.source = t
+                },
+                changeVolume: function (t) {
+                    var e = t.value;
+                    parseInt(t.value), parseInt(t.max);
+                    this.gainNode.gain.value = e
+                },
+                stop: function () {
+                    this.source.stop || (this.source.stop = source.noteOff), this.source.stop(0)
+                },
+                toggle: function () {
+                    this.playing ? this.stop() : this.play(), this.playing = !this.playing
+                }
+            },
+            audio7 = {
+                playing: !1,
+                gainNode: null,
+                play: function () {
+                    context.createGain || (context.createGain = context.createGainNode), this.gainNode = context
+                        .createGain();
+                    var t = context.createBufferSource();
+                    t.buffer = bufferList[6], t.connect(this.gainNode), this.gainNode.connect(context.destination),
+                        this.gainNode.gain.value = 0, t.loop = !0, t.start || (t.start = t.noteOn), t.start(0),
+                        this.source = t
+                },
+                changeVolume: function (t) {
+                    var e = t.value;
+                    parseInt(t.value), parseInt(t.max);
+                    this.gainNode.gain.value = e
+                },
+                stop: function () {
+                    this.source.stop || (this.source.stop = source.noteOff), this.source.stop(0)
+                },
+                toggle: function () {
+                    this.playing ? this.stop() : this.play(), this.playing = !this.playing
+                }
+            };
+    </script>
+    <noscript>Javascript needs to be supported and activated by this web browser in order for this website to play back sounds.</noscript>
 </body>
 
 </html>

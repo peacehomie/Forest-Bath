@@ -19,6 +19,11 @@ img {
     height: auto;
 }
 
+.header {
+    width: 100%;
+    position: relative;
+}
+
 /*a:link {
     text-decoration: none;
 }
@@ -78,47 +83,73 @@ a:visited {
     font-weight: lighter;
 }
 
-
-
-.header {
-    width: 100%;
-    position: relative;
-}
-
 .nav-right {
     position: absolute;
-    top: -50px;
+    top: -10px;
     right: 20px;
 }
 
+.nav-right li {
+    line-height:30px;
+    vertical-align:middle
+}
+
 #about {
-    width: 8em;
-    height: 7em;
-    display: table-cell;
-    vertical-align: middle;
-    padding-right: 1em;
-    padding-left: 1em;
+    display: block;
+    margin-right: 10px;
+    margin-left: 10px;
     border: 1px solid white;
-}
-
-#about a:hover {
-    color: white;
-    text-decoration: underline;
     cursor: pointer;
+    
 }
 
+#loading {
+    color: rgb(21, 255, 0);
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+/*
 #soundtoggle {
     width: 100%;
-    height: 7em;
+    height: 100%;
     display: table-cell;
     vertical-align: middle;
     border: 1px solid white;
+    cursor: pointer;
+}*/
+
+.playbutton {
+    position:absolute;
+    top:150px;
+    left:50%;
+    transform:translateX(-50%)
+   }
+
+.soundtoggle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../images/sound_on.png) no-repeat;
+    background-size: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.soundtoggle.mute {
+    background: url(../images/sound_off.png) no-repeat;
+    background-size: 100%;
+}
+
+.soundtoggle span {
+    display: none;
 }
 
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 ul li {
@@ -127,7 +158,7 @@ ul li {
 
 
 
-.image {
+.logo {
     position: relative;
     width: 50%;
     max-width: 500px;
