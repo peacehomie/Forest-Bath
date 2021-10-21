@@ -283,7 +283,7 @@
                         .createGain();
                     var t = context.createBufferSource();
                     t.buffer = bufferList[6], t.connect(this.gainNode), this.gainNode.connect(context.destination),
-                        this.gainNode.gain.value = 0, t.loop = !0, t.start || (t.start = t.noteOn), t.start(0),
+                        this.gainNode.gain.value = .5, t.loop = !0, t.start || (t.start = t.noteOn), t.start(0),
                         this.source = t
                 },
                 changeVolume: function (t) {
