@@ -1,17 +1,36 @@
 html {
-    height: 100%;
+    min-height: 100%;
     /*overflow: hidden;*/
 }
 
+
 body {
     min-height: 100%;
-    background-color: rgb(0, 51, 0);
+    background-color: green;
+    /*background: url(../images/skog.png) #053f00;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;*/
     font-family: 'Fira Sans', sans-serif;
     font-size: 16px;
     font-weight: lighter;
     color: white;
     animation: fadeIn;
     animation-duration: 1.5s;
+}
+
+a:link {
+    color:white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 img {
@@ -23,19 +42,6 @@ img {
     width: 100%;
     position: relative;
 }
-
-/*a:link {
-    text-decoration: none;
-}
-
-a:hover {
-    color: white;
-    text-decoration: underline;
-}
-
-a:visited {
-    color: white;
-}*/
 
 #overlay {
     position: fixed;
@@ -50,6 +56,12 @@ a:visited {
     z-index: 2;
     animation: fadeIn;
     animation-duration: .5s;
+}
+
+#overlayclose {
+    position: absolute;
+    right: 50px;
+    top: 50px;
 }
 
 #overlaytext {
@@ -85,7 +97,7 @@ a:visited {
 
 .nav-right {
     position: absolute;
-    top: -10px;
+    top: -50px;
     right: 20px;
 }
 
@@ -96,11 +108,10 @@ a:visited {
 
 #about {
     display: block;
-    margin-right: 10px;
+    margin-right: 30px;
     margin-left: 10px;
     /*border: 1px solid white;*/
     cursor: pointer;
-    
 }
 
 #loading {
@@ -109,16 +120,6 @@ a:visited {
     font-size: 16px;
     font-weight: lighter;
 }
-
-/*
-#soundtoggle {
-    width: 100%;
-    height: 100%;
-    display: table-cell;
-    vertical-align: middle;
-    border: 1px solid white;
-    cursor: pointer;
-}*/
 
 .playbutton {
     position:absolute;
@@ -161,32 +162,18 @@ ul li {
 .logo {
     position: relative;
     width: 50%;
-    max-width: 500px;
+    max-width: 450px;
     margin: 75px auto 0;
-    /*border: 1px solid white;*/
 }
+
 
 .forestimage {
-    opacity: .2;
-    /*border: 1px solid white;*/
+    position: relative;
+    width: 50%;
+    max-width:550px;
+    margin: 10px auto 0;    
+    opacity: .7;
 }
-
-/*.playmute {
-    display: block;
-    width: 30px;
-    height: 30px;
-    background-color: rgba(0, 0, 0, 0);
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-image: url("assets/sound-on.png");
-    background-origin: padding-box;
-    background-clip: border-box;
-    background-size: 100%;
-    margin-right: 10px;
-    margin-left: 10px;
-    }*/
 
 .audio {
     position: absolute;
@@ -220,8 +207,8 @@ ul li {
 }
 
 .audio-player:nth-child(3) {
-    top: 60%;
-    right: 85%;
+    top: 70%;
+    right: 90%;
     transform: translateX(125px);
 }
 
@@ -239,13 +226,13 @@ ul li {
 }
 
 .audio-player:nth-child(6) {
-    top: 60%;
-    left: 85%;
+    top: 70%;
+    left: 90%;
     transform: translateX(-125px);
 }
 
 .audio-player:nth-child(7) {
-    top: 80%;
+    top: 90%;
     right: 50%;
     transform: translateX(125px);
 }
@@ -316,40 +303,26 @@ ul li {
     transform: scale(1.1)
 }
 
-/*
-@media screen and (max-width:768px) {
-    .image {
-        padding-top:10px
-    }
-    .nav-right {
-        top:-20px
-    }
-    }
-
-
-@media screen and (max-width:800px) {
-.plyr--audio {
-    margin-top:5px
-}
-.audio-player {
-    padding-top:0;
-    padding-bottom:0;
-    width:42%
-}
-} */
-
 @media screen and (max-width:1016px) {
     .nav-right {
         position: absolute;
-        top: -75px;
+        top: -125px;
         right: 20px;
     }
 
-    .image {
+    .logo {
+        position: relative;
+        width: 75%;
+        max-width: 700px;
+        margin: 150px auto 0;
+    }
+
+    .forestimage {
         position: relative;
         z-index: -1;
         width: 90%;
-        margin: 100px auto 0;
+        margin: 75px auto 0;
+        opacity: 0.4;
     }
 
     .audio {
@@ -410,26 +383,28 @@ ul li {
         transform: translateX(100px);
     }
 
-    /*.playbutton {
-  position:absolute;
-  top:150px;
-  left:50%;
-  transform:translateX(-50%)
- }*/
 }
 
 @media screen and (max-width:680px) {
     .nav-right {
         position: absolute;
-        top: -75px;
+        top: -125px;
         right: 20px;
     }
 
-    .image {
+    .logo {
+        position: relative;
+        width: 75%;
+        max-width: 700px;
+        margin: 150px auto 0;
+    }
+
+    .forestimage {
         position: relative;
         z-index: -1;
         width: 90%;
-        margin: 100px auto 0;
+        margin: 75px auto 0;
+        opacity: 0.4;
     }
 
     .audio {
@@ -512,12 +487,6 @@ ul li {
         font-weight: lighter;
     }
 
-    /*.playbutton {
-  position:absolute;
-  top:150px;
-  left:50%;
-  transform:translateX(-50%)
- }*/
 }
 
 @media screen and (max-width:500px) {
@@ -527,11 +496,19 @@ ul li {
         right: 20px;
     }
 
-    .image {
+    .logo {
+        position: relative;
+        width: 90%;
+        max-width: 500px;
+        margin: 100px auto 0;
+    }
+
+    .forestimage {
         position: relative;
         z-index: -1;
         width: 90%;
         margin: 75px auto 0;
+        opacity: 0.4;
     }
 
     .audio {
@@ -614,11 +591,4 @@ ul li {
         font-size: 1rem;
         font-weight: lighter;
     }
-
-    /*.playbutton {
-  position:absolute;
-  top:150px;
-  left:50%;
-  transform:translateX(-50%)
- }*/
 }

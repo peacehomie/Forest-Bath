@@ -16,7 +16,10 @@
 </head>
 
 <body>
-    <div id="overlay" onclick="overlayOff()">
+    <div id="overlay" onclick="overlayOff()"> 
+        <div id="overlayclose"> 
+            <a href="#"><p>X Close</p></a>
+        </div>
         <div id="overlaytext">
             <h1>About Forest Bath</h1>
             <h2><em>'shinrin-yoku'</em></h2>
@@ -35,7 +38,7 @@
         <div class="nav-right">
             <ul>
                 <li>
-                    <a id="about" onclick="overlayOn()">About the project</a>
+                    <a href ="#" id="about" tabindex=0 onclick="overlayOn()">About the project</a>
                 </li>
                 <li>
                     <a href="#" id="playbutton" style="display: none;" onclick="playz();" class="soundtoggle mute">
@@ -55,9 +58,10 @@
         <h1>
             <img src="images/logo.png" alt="Forest Bath">
         </h1>
-        <div class="forestimage">
-            <img src="images/tree.png" alt="Trees swaying the wind">
-        </div>
+    </div>
+
+    <div class="forestimage">
+        <img src="images/skog.png" alt="Picture of a cabin deep in the woods">
     </div>
 
     <div class="audio">
@@ -70,7 +74,7 @@
         </div>
 
         <div class="audio-player audio-player-1">
-            <span>People</span>
+            <span>Water stream</span>
             <div class="audio-controls">
                 <input autocomplete="off" type="range" step="0.025" min="0" max="1" value="0" class="slider"
                     oninput="audio2.changeVolume(this);">
@@ -128,7 +132,7 @@
 
         function init() {
             window.AudioContext = window.AudioContext || window.webkitAudioContext, context = new AudioContext, (
-                bufferLoader = new BufferLoader(context, ["sounds/faglar.m4a", "sounds/folk.m4a", "sounds/regn.m4a", "sounds/vindspel.m4a", "sounds/regn_aska.m4a", "sounds/vind.m4a", "sounds/skog.m4a"],
+                bufferLoader = new BufferLoader(context, ["sounds/faglar.m4a", "sounds/vatten.m4a", "sounds/regn.m4a", "sounds/vindspel.m4a", "sounds/thunder.m4a", "sounds/vind.m4a", "sounds/skog.m4a"],
                     finishedLoading)).load()
         }
 

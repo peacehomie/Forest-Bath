@@ -8,6 +8,15 @@ function overlayOff() {
   document.getElementById("overlay").style.display = "none";
 }
 
+
+//Exit overlay using any key press
+
+$(document).keyup(function(e) {
+  if (e.key) {
+     overlayOff();
+ }
+});
+
 //Swap mute & unmute pic
 
 function swapImage() {
