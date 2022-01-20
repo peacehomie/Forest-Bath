@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap">
 
     <script src="js/jquery.min.js"></script>
     <link rel="stylesheet" href="css/stylesheet.css">
@@ -16,32 +17,47 @@
 </head>
 
 <body>
-    <div id="overlay" onclick="overlayOff()"> 
-        <div id="overlayclose"> 
-            <a href="#"><p>X Close</p></a>
+    <div role="dialog" id="overlay" aria-modal="true">
+        <div id="overlayclose" onclick="overlayOff()">
+            <a href="#">
+                <img alt="Close this dialog" role=button src="images/close.png">
+            </a>
         </div>
         <div id="overlaytext">
-            <h1>About Forest Bath</h1>
-            <h2><em>'shinrin-yoku'</em></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+            <h1>About 'Forest Bath' 🌿</h1>
+            <br>
+            <p>The term <a href="https://www.ecosia.org/search?q=Shinrin-Yoku" target="_blank"
+                    tabindex="0">'Shinrin-Yoku'</a> (which translates to
+                'forest bathing' in English) was
+                coined by the Japanese Ministry of Agriculture, Forestry, and Fisheries back in 1982. It involves
+                spending free time wandering in nature, and promotes wellbeing,
+                health, and joy.<br><br>
+                My idea with this project is to simulate part of that experience for you to enjoy at home, your office,
+                or whereever else you might be. The real deal is hard to beat, but sometimes circumstances forces one to
+                compromise.<br><br>
+                If you'd be curious to learn more about me and the stuff that I do, feel free to check out <a
+                    href="https://felixmaspers.se/" target="_blank">my website</a>.<br><br>Have a good one!
+                /Felix<br><br><br>
+                PS. Credit goes out to <a href="https://www.instagram.com/happypocketknife/"
+                    target="_blank">happypocketknife</a> for providing the pretty artwork. Hi Jörg!
+            </p>
         </div>
     </div>
 
     <div class="header">
+
+        <div class="nav-left">
+            <ul>
+                <li>
+                    <a href="#" id="about" onclick="overlayOn(), focusInput()">About the project</a>
+                </li>
+            </ul>
+        </div>
         <div class="nav-right">
             <ul>
                 <li>
-                    <a href ="#" id="about" tabindex=0 onclick="overlayOn()">About the project</a>
-                </li>
-                <li>
-                    <a href="#" id="playbutton" style="display: none;" onclick="playz();" class="soundtoggle mute">
+                    <a title="Tune in, or tune out" href="#" id="playbutton" style="display: none;" onclick="playz();"
+                        class="soundtoggle mute">
                         <span class="sr-only">Tune in, or tune out</span>
                     </a>
                 </li>
@@ -132,7 +148,7 @@
 
         function init() {
             window.AudioContext = window.AudioContext || window.webkitAudioContext, context = new AudioContext, (
-                bufferLoader = new BufferLoader(context, ["sounds/faglar.aac", "sounds/vatten.aac", "sounds/regn.aac", "sounds/vindspel.aac", "sounds/thunder.aac", "sounds/vind.aac", "sounds/skog.aac"],
+                bufferLoader = new BufferLoader(context, ["sounds/faglar.m4a", "sounds/vatten.m4a", "sounds/regn.m4a", "sounds/vindspel.m4a", "sounds/aska.m4a", "sounds/vind.m4a", "sounds/skog.m4a"],
                     finishedLoading)).load()
         }
 
@@ -142,32 +158,32 @@
 
         function playz() {
             isplaying ? ($("#playbutton").addClass("mute"), isplaying = !1) : ($("#playbutton").removeClass("mute"),
-                    isplaying = !0), audio1.toggle(), audio2.toggle(), audio3.toggle(), audio4.toggle(), audio5
-            .toggle(), audio6.toggle(), audio7.toggle()
+                isplaying = !0), audio1.toggle(), audio2.toggle(), audio3.toggle(), audio4.toggle(), audio5
+                    .toggle(), audio6.toggle(), audio7.toggle()
         }
         var audio1 = {
-                playing: !1,
-                gainNode: null,
-                play: function () {
-                    context.createGain || (context.createGain = context.createGainNode), this.gainNode = context
-                        .createGain();
-                    var t = context.createBufferSource();
-                    t.buffer = bufferList[0], t.connect(this.gainNode), this.gainNode.connect(context.destination),
-                        this.gainNode.gain.value = 0, t.loop = !0, t.start || (t.start = t.noteOn), t.start(0),
-                        this.source = t
-                },
-                changeVolume: function (t) {
-                    var e = t.value;
-                    parseInt(t.value), parseInt(t.max);
-                    this.gainNode.gain.value = e
-                },
-                stop: function () {
-                    this.source.stop || (this.source.stop = source.noteOff), this.source.stop(0)
-                },
-                toggle: function () {
-                    this.playing ? this.stop() : this.play(), this.playing = !this.playing
-                }
+            playing: !1,
+            gainNode: null,
+            play: function () {
+                context.createGain || (context.createGain = context.createGainNode), this.gainNode = context
+                    .createGain();
+                var t = context.createBufferSource();
+                t.buffer = bufferList[0], t.connect(this.gainNode), this.gainNode.connect(context.destination),
+                    this.gainNode.gain.value = 0, t.loop = !0, t.start || (t.start = t.noteOn), t.start(0),
+                    this.source = t
             },
+            changeVolume: function (t) {
+                var e = t.value;
+                parseInt(t.value), parseInt(t.max);
+                this.gainNode.gain.value = e
+            },
+            stop: function () {
+                this.source.stop || (this.source.stop = source.noteOff), this.source.stop(0)
+            },
+            toggle: function () {
+                this.playing ? this.stop() : this.play(), this.playing = !this.playing
+            }
+        },
             audio2 = {
                 playing: !1,
                 gainNode: null,
@@ -215,7 +231,7 @@
                 }
             },
 
-        
+
             audio4 = {
                 playing: !1,
                 gainNode: null,
@@ -309,7 +325,64 @@
                 }
             };
     </script>
-    <noscript>Javascript needs to be supported and activated by this web browser in order for this website to play back sounds.</noscript>
+    <script type="text/javascript">
+
+        var capture = $("#overlay")
+
+            .attr("tabindex", "0")
+            .focus("#overlay")
+
+            .keydown(
+                function handleKeydown(event) {
+
+                    if (event.key.toLowerCase() !== "tab") {
+
+                        return;
+
+                    }
+
+
+                    var tabbable = $()
+
+                        .add(capture.find("button, input, select, textarea"))
+
+                        .add(capture.find("[href]"))
+
+                        .add(capture.find("[tabindex]:not([tabindex='-1'])"))
+                        ;
+                    var target = $(event.target);
+
+
+                    if (event.shiftKey) {
+
+                        if (target.is(capture) || target.is(tabbable.first())) {
+
+
+                            event.preventDefault();
+                            tabbable.last().focus();
+
+                        }
+
+
+                    } else {
+
+                        if (target.is(tabbable.last())) {
+
+
+                            event.preventDefault();
+                            tabbable.first().focus();
+
+                        }
+
+                    }
+
+                }
+            )
+            ;
+
+    </script>
+    <noscript>Javascript needs to be supported and activated by this web browser in order for this website to play back
+        sounds.</noscript>
 </body>
 
 </html>

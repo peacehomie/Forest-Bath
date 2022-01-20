@@ -8,11 +8,17 @@ function overlayOff() {
   document.getElementById("overlay").style.display = "none";
 }
 
+//Focus on modal
 
-//Exit overlay using any key press
+function focusInput() {
+  document.getElementById("overlay").focus();
+}
+
+
+//Exit overlay using esc
 
 $(document).keyup(function(e) {
-  if (e.key) {
+  if (e.which == 27) {
      overlayOff();
  }
 });
