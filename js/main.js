@@ -1,25 +1,41 @@
-//Overlay on & off
+//About overlay on & off
 
-function overlayOn() {
-  document.getElementById("overlay").style.display = "block";
+function overlayAboutOn() {
+  document.getElementById("overlay-about").style.display = "block";
 }
 
-function overlayOff() {
-  document.getElementById("overlay").style.display = "none";
+function overlayAboutOff() {
+  document.getElementById("overlay-about").style.display = "none";
 }
 
-//Focus on modal
+//FAQ overlay on & off
 
-function focusInput() {
-  document.getElementById("overlay").focus();
+function overlayFaqOn() {
+  document.getElementById("overlay-faq").style.display = "block";
+}
+
+function overlayFaqOff() {
+  document.getElementById("overlay-faq").style.display = "none";
+}
+
+//Focus on About modal
+
+function focusInputAbout() {
+  document.getElementById("overlay-about").focus();
+}
+
+//Focus on FAQ modal
+
+function focusInputFaq() {
+  document.getElementById("overlay-faq").focus();
 }
 
 
 //Exit overlay using esc
 
 $(document).keyup(function(e) {
-  if (e.which == 27) {
-     overlayOff();
+  if (e.which == 27) {  
+     overlayAboutOff(), overlayFaqOff();
  }
 });
 
