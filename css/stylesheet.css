@@ -61,7 +61,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url(../images/modalabout.jpg) no-repeat;
+    background: url('../images/modalabout.jpg') no-repeat;
     background-size: cover;
     /*background-color: rgba(0, 0, 0, 0.959);*/
     overflow-y: auto;
@@ -78,7 +78,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url(../images/modalfaq.jpg) no-repeat;
+    background: url('../images/modalfaq.jpg') no-repeat;
     background-size: cover;
     /*background-color: rgba(0, 0, 0, 0.959);*/
     overflow-y: auto;
