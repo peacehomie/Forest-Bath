@@ -67,7 +67,7 @@ img {
     overflow-y: auto;
     z-index: 2;
     animation: fadeIn;
-    animation-duration: .5s;
+    animation-duration: 1s;
 }
 
 #overlay-faq {
@@ -84,7 +84,7 @@ img {
     overflow-y: auto;
     z-index: 2;
     animation: fadeIn;
-    animation-duration: .5s;
+    animation-duration: 1s;
 }
 
 #overlayclose {
