@@ -61,8 +61,6 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../images/modalabout.jpg') no-repeat;
-    background-size: cover;
     /*background-color: rgba(0, 0, 0, 0.959);*/
     overflow-y: auto;
     z-index: 2;
@@ -78,8 +76,6 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../images/modalfaq.jpg') no-repeat;
-    background-size: cover;
     /*background-color: rgba(0, 0, 0, 0.959);*/
     overflow-y: auto;
     z-index: 2;
@@ -108,8 +104,6 @@ img {
     -ms-transform: translate(-50%, -50%);
 }
 
-
-
 #overlaytext span {
     background-color: rgba(0, 0, 0, 0.877);
     padding: 7px;
@@ -137,6 +131,10 @@ img {
     font-weight: 100;
     text-align: left;
     line-height: 2.1;
+}
+
+#overlaytext ul {
+    padding-left: 20px;
 }
 
 #overlaytext p {

@@ -12,13 +12,13 @@
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="preload" href="/images/skog.png" as="image"/>
-    <link rel="preload" href="/images/modalabout.jpg" as="image"/>
-    <link rel="preload" href="/images/modalfaq.jpg" as="image"/>
+    <link rel="prefetch" href="/images/skog.png" as="image"/>
+    <link rel="prefetch" href="/images/modalabout.jpg" as="image"/>
+    <link rel="prefetch" href="/images/modalfaq.jpg" as="image"/>
 </head>
 
 <body>
-    <div role="dialog" id="overlay-about" aria-modal="true" tabindex="0">
+    <div role="dialog" id="overlay-about" aria-modal="true" tabindex="0" style="background: url('/images/modalabout.jpg'); background-size: cover;">
         <div id="overlayclose" onclick="overlayAboutOff()">
             <a href="#">
                 <img alt="Close this dialog" title="Close" src="images/close.png">
@@ -60,7 +60,7 @@
         </div>
     </div>
 
-    <div role="dialog" id="overlay-faq" aria-modal="true" tabindex="0">
+    <div role="dialog" id="overlay-faq" aria-modal="true" tabindex="0" style="background: url('/images/modalfaq.jpg'); background-size: cover;">
         <div id="overlayclose" onclick="overlayFaqOff()">
             <a href="#" tabindex="0">
                 <img alt="Close this dialog" title="Close" src="images/close.png">
@@ -106,6 +106,19 @@
                     makes it accessible to everyone. Since there's no personal data being collected, I've decided not to
                     include a <a href="https://www.goatcounter.com/help/gdpr" target="_blank">GDPR consent notice</a>
                     when entering this website.</span></p>
+            <br>
+            <br>
+            <h2><span><b>Q:</b> Where do the sounds used on this website come from?</span></h2>
+            <p><span><b>A:</b> I've collected different field recordings from <a href="https://freesound.org/" target="_blank">freesound</a>; edited them to fit well together; as well as stripping them of unwanted noise (thanks Ville for your help). Credit goes out to the following freesound users, for their excellent field recordings:</span></p>
+            <ul style="list-style-type: disc;">
+                <li style="display: list-item;"><h3><span><a href="https://freesound.org/people/nfsgit/" target="_blank">nfsgit</a><em> (Forest ambience)</em></span></h3></li>
+                <li style="display: list-item;"><h3><span><a href="https://freesound.org/people/gis_sweden/" target="_blank">gis_sweden</a><em> (More birds)</em></span></h3></li>
+                <li style="display: list-item;"><h3><span><a href="https://freesound.org/people/jackthemurray/" target="_blank">jackthemurray</a><em> (Water stream)</em></span></h3></li>
+                <li style="display: list-item;"><h3><span><a href="https://freesound.org/people/o_ciz/" target="_blank">o_ciz</a><em> (Light rain)</em></span></h3></li>
+                <li style="display: list-item;"><h3><span><a href="https://freesound.org/people/Philip%20Goddard/" target="_blank">Philip Goddard</a><em> (Wind chime)</em></span></h3></li>
+                <li style="display: list-item;"><h3><span><a href="https://freesound.org/people/thfc140491/" target="_blank">thfc140491</a><em> (Thunder)</em></span></h3></li>
+                <li style="display: list-item;"><h3><span><a href="https://freesound.org/people/Sheyvan/" target="_blank">Sheyvan</a><em> (Wind)</em></span></h3></li>
+            </ul>
             <br>
             <br>
             <h2><span><b>Q:</b> I have a question that I can't find the answer to here; or feedback I'd like to give.
