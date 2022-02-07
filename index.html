@@ -10,11 +10,18 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <link rel="preload" as="image" href="images/skog.png"/>
+    <link rel="preload" as="image" href="images/modalabout.jpg"/>
+    <link rel="preload" as="image" href="images/modalfaq.jpg"/>
+
+    <link rel="stylesheet" href="css/stylesheet.css" media="none" onload="if(media!='all')media='all'"/>
+    
+    <noscript>
+        <link rel="stylesheet" href="css/stylesheet.css"/>
+    </noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="prefetch" href="images/skog.png" as="image"/>
-    <link rel="prefetch" href="images/modalabout.jpg" as="image"/>
-    <link rel="prefetch" href="images/modalfaq.jpg" as="image"/>
+    
 </head>
 
 <body>
@@ -138,10 +145,10 @@
         <div class="nav-left">
             <ul>
                 <li>
-                    <a href="#" id="about" onclick="overlayAboutOn(), focusInputAbout()">About the project</a>
+                    <a href="#" id="about" style="display: none;" onclick="overlayAboutOn(), focusInputAbout()">About the project</a>
                 </li>
                 <li>
-                    <a href="#" id="faq" onclick="overlayFaqOn(), focusInputFaq()">FAQ</a>
+                    <a href="#" id="faq" style="display: none;" onclick="overlayFaqOn(), focusInputFaq()">FAQ</a>
                 </li>
             </ul>
         </div>
@@ -154,7 +161,7 @@
                 </li>
                 <li id="loading">
                     <div id="loading">
-                        Loading ...
+                        Loading sounds...
                     </div>
                 </li>
             </ul>
@@ -244,7 +251,7 @@
         }
 
         function finishedLoading(t) {
-            $("#loading").hide(), $("#playbutton").show(), everythingready = !0, bufferList = t
+            $("#loading").hide(), $("#about").show(), $("#faq").show(), $("#playbutton").show(), everythingready = !0, bufferList = t
         }
 
         function playz() {
