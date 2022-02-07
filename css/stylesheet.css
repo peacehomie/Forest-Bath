@@ -65,7 +65,7 @@ img {
     overflow-y: auto;
     z-index: 2;
     animation: fadeIn;
-    animation-duration: 1s;
+    animation-duration: .6s;
 }
 
 #overlay-faq {
@@ -80,7 +80,7 @@ img {
     overflow-y: auto;
     z-index: 2;
     animation: fadeIn;
-    animation-duration: 1s;
+    animation-duration: .6s;
 }
 
 #overlayclose {
@@ -215,15 +215,14 @@ img {
 
 .soundtoggle {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: url(../images/sound_on.png) no-repeat;
     background-size: 100%;
     margin-right: 10px;
     margin-left: 10px;
-    animation: flipInX;
+    animation: fadeInDown;
     animation-duration: 1.5s;
-    animation-iteration-count: 1;
     transition: transform 0.25s ease;
 }
 
