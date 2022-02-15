@@ -43,6 +43,10 @@ a:focus-visible {
     outline: #fb0 solid 3px;
 }
 
+a:-webkit-focus-visible {
+    outline: #fb0 solid 3px;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -362,6 +366,10 @@ ul li {
 }
 
 .slider:focus-visible {
+    outline: #fb0 solid 3px;
+}
+
+.slider:-webkit-focus-visible {
     outline: #fb0 solid 3px;
 }
 
