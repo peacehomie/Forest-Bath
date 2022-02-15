@@ -55,7 +55,6 @@ img {
 
 #overlay-about {
     position: fixed;
-    display: none;
     height: 100%;
     top: 0;
     left: 0;
@@ -70,7 +69,6 @@ img {
 
 #overlay-faq {
     position: fixed;
-    display: none;
     height: 100%;
     top: 0;
     left: 0;

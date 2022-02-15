@@ -8,24 +8,22 @@
     <meta name="Forest Bath" content="Tune in to a virtual forest soundscape.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
 
-    <link rel="preload" as="image" href="images/skog.png"/>
-    <link rel="preload" as="image" href="images/modalabout.jpg"/>
-    <link rel="preload" as="image" href="images/modalfaq.jpg"/>
+    <link rel="preload" as="image" href="images/skog.png" />
+    <link rel="preload" as="image" href="images/modalabout.jpg" />
+    <link rel="preload" as="image" href="images/modalfaq.jpg" />
 
-    <!--<link rel="stylesheet" href="css/stylesheet.css" media="none" onload="if(media!='all')media='all'"/>
-    -->
-    
-   
-    <link rel="stylesheet" href="css/stylesheet.css"/>
+    <link rel="stylesheet" href="css/stylesheet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    
+
 </head>
 
 <body>
-    <div role="dialog" id="overlay-about" aria-modal="true" tabindex="0" style="background-image: url('images/modalabout.jpg'); background-size: cover;">
+    <div role="dialog" id="overlay-about" aria-modal="true"
+        style="background-image: url('images/modalabout.jpg'); background-size: cover; display: none;">
         <div id="overlayclose" onclick="overlayAboutOff()">
             <a href="#">
                 <img alt="Close this dialog" title="Close" src="images/close.png">
@@ -60,16 +58,17 @@
                 <span>
                     <b>PS.</b> Credit goes out to <a href="https://www.instagram.com/happypocketknife/" target="_blank">
                         happypocketknife</a> for providing the pretty artwork, as well as to <a
-                        href="https://www.instagram.com/adr_damien/" target="_blank">my favorite Frenchman</a> for the
+                        href="https://www.instagram.com/adr_damien/" target="_blank"> my favorite Frenchman</a> for the
                     inspiring background photos. Hi guys! :~)
                 </span>
             </h3><br><br>
         </div>
     </div>
 
-    <div role="dialog" id="overlay-faq" aria-modal="true" tabindex="0" style="background-image: url('images/modalfaq.jpg'); background-size: cover;">
+    <div role="dialog" id="overlay-faq" aria-modal="true"
+        style="background-image: url('images/modalfaq.jpg'); background-size: cover; display: none;">
         <div id="overlayclose" onclick="overlayFaqOff()">
-            <a href="#" tabindex="0">
+            <a href="#">
                 <img alt="Close this dialog" title="Close" src="images/close.png">
             </a>
         </div>
@@ -89,9 +88,11 @@
             <br>
             <br>
             <h2><span><b>Q:</b> How do I use this website?</span></h2>
-            <p><span><b>A:</b> Once the sound toggle is set to 'on', you can use the volume sliders to change the volume
+            <p><span><b>A:</b> Once the sound toggle button is set to 'on', you can drag the handles on the volume
+                    sliders to change the
+                    volume
                     of the
-                    different sound elements.</span></p>
+                    different sound elements. </span></p>
             <br>
             <br>
             <h2><span><b>Q:</b> I'm on my phone or tablet, and the sound doesn't work. What to do?</span></h2>
@@ -116,15 +117,39 @@
             <br>
             <br>
             <h2><span><b>Q:</b> Where do the sounds used on this website come from?</span></h2>
-            <p><span><b>A:</b> I've collected different field recordings from <a href="https://freesound.org/" target="_blank">freesound</a>; edited them to fit well together; as well as stripping them of unwanted noise (thanks Ville for your help). Credit goes out to the following freesound users, for their excellent field recordings:</span></p>
+            <p><span><b>A:</b> I've collected different field recordings from <a href="https://freesound.org/"
+                        target="_blank">freesound</a>; edited them to fit well together; as well as stripping them of
+                    unwanted noise (thanks Ville for your help). Credit goes out to the following freesound users, for
+                    their excellent field recordings:</span></p>
             <ul style="list-style-type: disc;">
-                <li style="display: list-item;"><h3><span><a href="https://freesound.org/people/nfsgit/" target="_blank">nfsgit</a><em> (Forest ambience)</em></span></h3></li>
-                <li style="display: list-item;"><h3><span><a href="https://freesound.org/people/gis_sweden/" target="_blank">gis_sweden</a><em> (More birds)</em></span></h3></li>
-                <li style="display: list-item;"><h3><span><a href="https://freesound.org/people/jackthemurray/" target="_blank">jackthemurray</a><em> (Water stream)</em></span></h3></li>
-                <li style="display: list-item;"><h3><span><a href="https://freesound.org/people/o_ciz/" target="_blank">o_ciz</a><em> (Light rain)</em></span></h3></li>
-                <li style="display: list-item;"><h3><span><a href="https://freesound.org/people/Philip%20Goddard/" target="_blank">Philip Goddard</a><em> (Wind chime)</em></span></h3></li>
-                <li style="display: list-item;"><h3><span><a href="https://freesound.org/people/thfc140491/" target="_blank">thfc140491</a><em> (Thunder)</em></span></h3></li>
-                <li style="display: list-item;"><h3><span><a href="https://freesound.org/people/Sheyvan/" target="_blank">Sheyvan</a><em> (Wind)</em></span></h3></li>
+                <li style="display: list-item;">
+                    <h3><span><a href="https://freesound.org/people/nfsgit/" target="_blank">nfsgit</a><em> (Forest
+                                ambience)</em></span></h3>
+                </li>
+                <li style="display: list-item;">
+                    <h3><span><a href="https://freesound.org/people/gis_sweden/" target="_blank">gis_sweden</a><em>
+                                (More birds)</em></span></h3>
+                </li>
+                <li style="display: list-item;">
+                    <h3><span><a href="https://freesound.org/people/jackthemurray/"
+                                target="_blank">jackthemurray</a><em> (Water stream)</em></span></h3>
+                </li>
+                <li style="display: list-item;">
+                    <h3><span><a href="https://freesound.org/people/o_ciz/" target="_blank">o_ciz</a><em> (Light
+                                rain)</em></span></h3>
+                </li>
+                <li style="display: list-item;">
+                    <h3><span><a href="https://freesound.org/people/Philip%20Goddard/" target="_blank">Philip
+                                Goddard</a><em> (Wind chime)</em></span></h3>
+                </li>
+                <li style="display: list-item;">
+                    <h3><span><a href="https://freesound.org/people/thfc140491/" target="_blank">thfc140491</a><em>
+                                (Thunder)</em></span></h3>
+                </li>
+                <li style="display: list-item;">
+                    <h3><span><a href="https://freesound.org/people/Sheyvan/" target="_blank">Sheyvan</a><em>
+                                (Wind)</em></span></h3>
+                </li>
             </ul>
             <br>
             <br>
@@ -145,7 +170,8 @@
         <div class="nav-left">
             <ul>
                 <li>
-                    <a href="#" id="about" style="display: none;" onclick="overlayAboutOn(), focusInputAbout()">About the project</a>
+                    <a href="#" id="about" style="display: none;" onclick="overlayAboutOn(), focusInputAbout()">About
+                        the project</a>
                 </li>
                 <li>
                     <a href="#" id="faq" style="display: none;" onclick="overlayFaqOn(), focusInputFaq()">FAQ</a>
@@ -424,14 +450,12 @@
             };
     </script>
 
-    <!--Trap focus inside About overlay-->
-
     <script type="text/javascript">
 
-        var capture = $("overlay-about")
+        var captureAbout = $("#overlay-about")
 
-            .attr("tabindex", "0")
-            .focus("overlay-about")
+            .attr("tabindex", "-1")
+            .focus()
 
             .keydown(
                 function handleKeydown(event) {
@@ -445,18 +469,75 @@
 
                     var tabbable = $()
 
-                        .add(capture.find("button, input, select, textarea"))
+                        .add(captureAbout.find("button, input, select, textarea"))
 
-                        .add(capture.find("[href]"))
+                        .add(captureAbout.find("[href]"))
 
-                        .add(capture.find("[tabindex]:not([tabindex='-1'])"))
+                        .add(captureAbout.find("[tabindex]:not([tabindex='-1'])"))
                         ;
                     var target = $(event.target);
 
 
                     if (event.shiftKey) {
 
-                        if (target.is(capture) || target.is(tabbable.first())) {
+                        if (target.is(captureAbout) || target.is(tabbable.first())) {
+
+
+                            event.preventDefault();
+                            tabbable.last().focus();
+
+                        }
+
+
+                    } else {
+
+                        if (target.is(tabbable.last())) {
+
+
+                            event.preventDefault();
+                            tabbable.first().focus();
+
+                        }
+
+                    }
+
+                }
+            )
+        ;
+
+    </script>
+
+    <script type="text/javascript">
+
+        var captureFaq = $("#overlay-faq")
+
+            .attr("tabindex", "-1")
+            .focus()
+
+            .keydown(
+                function handleKeydown(event) {
+
+                    if (event.key.toLowerCase() !== "tab") {
+
+                        return;
+
+                    }
+
+
+                    var tabbable = $()
+
+                        .add(captureFaq.find("button, input, select, textarea"))
+
+                        .add(captureFaq.find("[href]"))
+
+                        .add(captureFaq.find("[tabindex]:not([tabindex='-1'])"))
+                        ;
+                    var target = $(event.target);
+
+
+                    if (event.shiftKey) {
+
+                        if (target.is(captureFaq) || target.is(tabbable.first())) {
 
 
                             event.preventDefault();
@@ -483,66 +564,6 @@
 
     </script>
 
-    
-    <!--Trap focus inside FAQ overlay-->
-
-    <script type="text/javascript">
-
-        var capture = $("overlay-faq")
-
-            .attr("tabindex", "0")
-            .focus("overlay-faq")
-
-            .keydown(
-                function handleKeydown(event) {
-
-                    if (event.key.toLowerCase() !== "tab") {
-
-                        return;
-
-                    }
-
-
-                    var tabbable = $()
-
-                        .add(capture.find("button, input, select, textarea"))
-
-                        .add(capture.find("[href]"))
-
-                        .add(capture.find("[tabindex]:not([tabindex='-1'])"))
-                        ;
-                    var target = $(event.target);
-
-
-                    if (event.shiftKey) {
-
-                        if (target.is(capture) || target.is(tabbable.first())) {
-
-
-                            event.preventDefault();
-                            tabbable.last().focus();
-
-                        }
-
-
-                    } else {
-
-                        if (target.is(tabbable.last())) {
-
-
-                            event.preventDefault();
-                            tabbable.first().focus();
-
-                        }
-
-                    }
-
-                }
-            )
-            ;
-
-    </script>
-   
     <noscript>Javascript needs to be supported and activated by this web browser in order for this website to play back
         sounds.</noscript>
 </body>
