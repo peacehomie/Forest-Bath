@@ -5,10 +5,6 @@ html, body {
     width: 100%;
     overflow: visible;
     background-color: green;
-    /*background: url(../images/skog.png) #053f00;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;*/
     font-family: 'Optima', Arial;
     font-size: 18px;
     font-weight: 200;
@@ -16,14 +12,6 @@ html, body {
     animation: fadeIn;
     animation-duration: 1.5s;
 }
-
-/*body h2 {
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 28px;
-    font-size: 1.75rem;
-    font-weight: 100;
-    text-align: center;
-}*/
 
 a:link {
     color:white;
@@ -64,7 +52,6 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    /*background-color: rgba(0, 0, 0, 0.959);*/
     overflow-y: auto;
     z-index: 2;
     animation: fadeIn;
@@ -78,7 +65,6 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    /*background-color: rgba(0, 0, 0, 0.959);*/
     overflow-y: auto;
     z-index: 2;
     animation: fadeIn;
@@ -92,9 +78,7 @@ img {
     float: right;
     top: 50px;
     right: 50px;
-    z-index: 3;
-    /*background-color: black;*/
-    
+    z-index: 3;    
 }
 
 #overlaytext {
@@ -185,7 +169,6 @@ img {
     display: block;
     margin-right: 20px;
     margin-left: 10px;
-    /*border: 1px solid white;*/
     cursor: pointer;
     animation: fadeInDown;
     animation-duration: 1.5s;
@@ -194,7 +177,6 @@ img {
 #faq {
     display: block;
     margin-left: 30px;
-    /*border: 1px solid white;*/
     cursor: pointer;
     animation: fadeInDown;
     animation-duration: 1.5s;
