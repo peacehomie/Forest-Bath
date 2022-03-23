@@ -107,16 +107,6 @@
                     mute and unmute it from there.</span></p>
             <br>
             <br>
-            <h2><span><b>Q:</b> Am I in any way being tracked while using this website?</span></h2>
-            <p><span><b>A:</b> There's no tracking of personal data. I have however implemented <a
-                        href="https://www.goatcounter.com/" target="_blank">GoatCounter</a> on this website in order for
-                    me to better understand where its visitors are coming from, as well as which type of device they're
-                    using. This information is helpful to me because I'm trying to design this website in a way that
-                    makes it accessible to everyone. Since there's no personal data being collected, I've decided not to
-                    include a <a href="https://www.goatcounter.com/help/gdpr" target="_blank">GDPR consent notice</a>
-                    when entering this website.</span></p>
-            <br>
-            <br>
             <h2><span><b>Q:</b> Where do the sounds used on this website come from?</span></h2>
             <p><span><b>A:</b> I've collected different field recordings from <a href="https://freesound.org/"
                         target="_blank">freesound</a>; edited them to fit well together; as well as stripping them of
@@ -154,6 +144,16 @@
             </ul>
             <br>
             <br>
+            <h2><span><b>Q:</b> Am I in any way being tracked while using this website?</span></h2>
+            <p><span><b>A:</b> There's no tracking of personal data. I have however implemented <a
+                        href="https://www.goatcounter.com/" target="_blank">GoatCounter</a> on this website in order for
+                    me to better understand where its visitors are coming from, as well as which type of device they're
+                    using. This information is helpful to me because I'm trying to design this website in a way that
+                    makes it accessible to everyone. Since there's no personal data being collected, I've decided not to
+                    include a <a href="https://www.goatcounter.com/help/gdpr" target="_blank">GDPR consent notice</a>
+                    when entering this website.</span></p>
+            <br>
+            <br>
             <h2><span><b>Q:</b> I have a question that I can't find the answer to here; or feedback I'd like to give.
                     How can I
                     get in touch?</span></h2>
@@ -172,7 +172,7 @@
             <ul>
                 <li>
                     <a href="#" id="about" style="display: none;" onclick="overlayAboutOn(), focusInputAbout()">
-                        <b>About the project</b></a>
+                        <b>About</b></a>
                 </li>
                 <li>
                     <a href="#" id="faq" style="display: none;" onclick="overlayFaqOn(), focusInputFaq()"><b>FAQ</b></a>
@@ -197,7 +197,10 @@
 
     <div class="logo">
         <h1>
-            <img src="images/logo.png" alt="Forest Bath">
+            <picture>
+                <source srcset="images/logo2.png" media="(max-width: 375px)"/>
+                <img src="images/logo.png" alt="Forest Bath">
+            </picture>  
         </h1>
     </div>
 
