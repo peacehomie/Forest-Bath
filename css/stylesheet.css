@@ -17,6 +17,7 @@ html {
     background-position: center center;
     font-family: 'Optima', Arial;
     font-size: 18px;
+    /*font-size: 1.125rem;*/
     font-weight: 400;
     color: black;
     animation: fadeIn;
@@ -187,6 +188,10 @@ a:-webkit-focus-visible {
     animation-duration: 1.5s;
 }
 
+#about span {
+    font-size: 22px;
+}
+
 /*#about span {
     color: white;
     background-image: url(../images/about_brush.png);
@@ -201,6 +206,10 @@ a:-webkit-focus-visible {
     cursor: pointer;
     animation: fadeInDown;
     animation-duration: 1.5s;
+}
+
+#faq span {
+    font-size: 22px;
 }
 
 #loading {
@@ -221,8 +230,8 @@ a:-webkit-focus-visible {
 
 .soundtoggle {
     display: block;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background: url(../images/sound_on.png) no-repeat;
     background-size: contain;
     margin-right: 10px;
@@ -238,8 +247,8 @@ a:-webkit-focus-visible {
 
 .soundtoggle.mute {
     display: block;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background: url(../images/sound_off.png) no-repeat;
     background-size: contain;
 }
@@ -758,6 +767,11 @@ ul li {
         height: 80px;
     }
 
+    .soundtoggle.mute {
+        width: 80px;
+        height: 80px;
+    }
+
     .logo {
         width: 100%;
         max-width: 500px;
@@ -931,6 +945,12 @@ ul li {
         height: 80px;
     }
 
+    .soundtoggle.mute {
+        width: 80px;
+        height: 80px;
+    }
+
+
     .logo {
         width: 100%;
         max-width: 500px;
@@ -1095,166 +1115,167 @@ ul li {
 
 @media (min-width:1920px) and (max-width:3439px) {
     
-    html {
-        font-size: 24px;
-    }
-    
     .soundtoggle {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .soundtoggle.mute {
+        width: 60px;
+        height: 60px;
     }
 
     .logo {
         width: 100%;
-        max-width: 500px;
+        max-width: 350px;
     }
 
     .audio-controls {
-        max-width: 250px;
+        max-width: 200px;
     }
 
     .audio-player:nth-child(2) {
-        top: 40%;
+        top: 35%;
         right: 100%;
     }
     
     .audio-player:nth-child(3) {
-        top: 80%;
+        top: 70%;
         right: 95%;
     }
 
     .audio-player:nth-child(5) {
-        top: 35%;
+        top: 30%;
         right: 10%;
     }
 
     .audio-player:nth-child(6) {
-        top: 70%;
+        top: 60%;
         right: 15%;
     }
 
     .audio-player:nth-child(7) {
-        top: 100%;
+        top: 90%;
         right: 20%;
     }
 
     .slider-1 {
-        height: 120px;
+        height: 90px;
         background: url(../images/slider.png) no-repeat center 100%;
         background-size: contain;
 
     }
 
     .slider-1::-webkit-slider-thumb {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
     
     .slider-1::-moz-range-thumb {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
 
     .slider-2 {
-        height: 120px;
+        height: 90px;
         background: url(../images/slider.png) no-repeat center 100%;
         background-size: contain;
 
     }
 
     .slider-2::-webkit-slider-thumb {
-        width: 65px;
-        height: 65px;
+        width: 50px;
+        height: 50px;
     }
     
     .slider-2::-moz-range-thumb {
-        width: 65px;
-        height: 65px;
+        width: 50px;
+        height: 50px;
     }
 
     .slider-3 {
-        height: 120px;
+        height: 90px;
         background: url(../images/slider.png) no-repeat center 100%;
         background-size: contain;
 
     }
 
     .slider-3::-webkit-slider-thumb {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
     
     .slider-3::-moz-range-thumb {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
 
     .slider-4 {
-        height: 120px;
+        height: 90px;
         background: url(../images/slider.png) no-repeat center 100%;
         background-size: contain;
 
     }
 
     .slider-4::-webkit-slider-thumb {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
     
     .slider-4::-moz-range-thumb {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
 
     .slider-5 {
-        height: 120px;
+        height: 90px;
         background: url(../images/slider.png) no-repeat center 100%;
         background-size: contain;
 
     }
 
     .slider-5::-webkit-slider-thumb {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
     
     .slider-5::-moz-range-thumb {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
 
     .slider-6 {
-        height: 120px;
+        height: 90px;
         background: url(../images/slider.png) no-repeat center 100%;
         background-size: contain;
 
     }
 
     .slider-6::-webkit-slider-thumb {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
     
     .slider-6::-moz-range-thumb {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
 
     .slider-7 {
-        height: 120px;
+        height: 90px;
         background: url(../images/slider.png) no-repeat center 100%;
         background-size: contain;
 
     }
 
     .slider-7::-webkit-slider-thumb {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
     
     .slider-7::-moz-range-thumb {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
 }
 
