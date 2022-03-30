@@ -1735,16 +1735,37 @@ ul li {
 }
 
 @media screen and (max-width:375px) {
+
+    .nav-left {
+        position: absolute;
+        top: -35px;
+        left: 10px;
+    }
+    .nav-right {
+        position: absolute;
+        top: -40px;
+        right: 10px;
+    }
+
+    #about span {
+        font-size: 18px;
+    }
+
+    #faq span {
+        font-size: 18px;
+    }
+
     .logo {
         text-align: center;
         position: relative;
         width: 85%;
-        max-width: 350px;
-        margin: 100px auto 0;
+        max-width: 200px;
+        margin: 57px auto 0;
+        opacity: 0.8;
     }
 
     .audio-player span {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .slider-1 {
@@ -1776,44 +1797,44 @@ ul li {
     }   
 
     .audio-player:nth-child(1) {
-        top: 10%;
+        top: 15%;
         right: 90%;
         transform: translateX(125px);
     }
 
     .audio-player:nth-child(2) {
-        top: 35%;
+        top: 40%;
         right: 90%;
         transform: translateX(125px);
     }
 
     .audio-player:nth-child(3) {
-        top: 60%;
+        top: 64%;
         right: 90%;
         transform: translateX(125px);
     }
 
 
     .audio-player:nth-child(4) {
-        top: 10%;
+        top: 15%;
         left: 90%;
         transform: translateX(-125px);
     }
 
     .audio-player:nth-child(5) {
-        top: 35%;
+        top: 40%;
         left: 90%;
         transform: translateX(-125px);
     }
 
     .audio-player:nth-child(6) {
-        top: 60%;
+        top: 64%;
         left: 90%;
         transform: translateX(-125px);
     }
 
     .audio-player:nth-child(7) {
-        top: 83%;
+        top: 85%;
         right: 50%;
         transform: translateX(90px);
     }
