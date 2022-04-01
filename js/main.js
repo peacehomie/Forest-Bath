@@ -1,3 +1,12 @@
+//Alert for mobile users
+
+  function HelloMobile(){
+    HelloMobile = function(){}; // kill it as soon as it was called
+    if (window.innerWidth < 850) {
+    alert("Hello Mobile/Tablet User! Quick info: in order to play sound, make sure 'silent mode' on your device is turned off. 🔊");
+    }
+};
+
 //About overlay on & off
 
 function overlayAboutOn() {
@@ -33,10 +42,10 @@ function focusInputFaq() {
 
 //Exit overlay using esc
 
-$(document).keyup(function(e) {
-  if (e.which == 27) {  
-     overlayAboutOff(), overlayFaqOff();
- }
+$(document).keyup(function (e) {
+  if (e.which == 27) {
+    overlayAboutOff(), overlayFaqOff();
+  }
 });
 
 //Swap mute & unmute pic

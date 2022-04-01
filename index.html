@@ -12,9 +12,7 @@
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
 
-    <script data-goatcounter="https://forestbath.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-
+    <script data-goatcounter="https://forestbath.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <link rel="preload" as="image" href="images/skog.png" />
     <link rel="preload" as="image" href="images/modalabout.jpg" />
     <link rel="preload" as="image" href="images/modalfaq.jpg" />
@@ -23,11 +21,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <meta property="og:title" content="Come, step into a virtual forest.">
-	<meta property="og:site_name" content="forestbath.online">
-	<meta property="og:url" content="https://forestbath.online/">
-	<meta property="og:description" content="Tune in, and tune out...">
-	<meta property="og:type" content="website">
-	<meta property="og:image" content="https://forestbath.online/images/meta_logo.png">
+    <meta property="og:site_name" content="forestbath.online">
+    <meta property="og:url" content="https://forestbath.online/">
+    <meta property="og:description" content="Tune in, and tune out...">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://forestbath.online/images/meta_logo.png">
     <meta property="og:image:alt" content="A picture of the forestbath.online logo.">
 
     <meta name="twitter:card" content="summary_large_image">
@@ -35,11 +33,12 @@
     <meta name="twitter:title" content="Come, step into a virtual forest.">
     <meta name="twitter:description" content="Tune in, and tune out...">
     <meta name="twitter:image" content="https://forestbath.online/images/meta_logo.png">
-    <meta name="twitter:image:alt" content="A picture of the forestbath.online logo." >
+    <meta name="twitter:image:alt" content="A picture of the forestbath.online logo.">
 
 </head>
 
 <body>
+
     <div role="dialog" id="overlay-about" aria-modal="true"
         style="background-image: url('images/modalabout.jpg'); background-size: cover; display: none;">
         <div id="overlayclose" onclick="overlayAboutOff()">
@@ -67,7 +66,8 @@
                     If you'd be curious to learn more about me and the stuff that I do–or simply wanna say hi, or
                     provide
                     some kind of feedback–feel free to visit
-                    <a href="https://felixmaspers.online/" target="_blank">my website</a>. You can also reach me at <a href="mailto:hello@forestbath.online">hello@forestbath.online</a>.<br><br>Enjoy, and
+                    <a href="https://felixmaspers.online/" target="_blank">my website</a>. You can also reach me at <a
+                        href="mailto:hello@forestbath.online">hello@forestbath.online</a>.<br><br>Enjoy, and
                     have a good one!
                     /Felix
                 </span>
@@ -175,7 +175,8 @@
             <h2><span><b>Q:</b> I have a question that I can't find the answer to here; or feedback I'd like to give.
                     How can I
                     get in touch?</span></h2>
-            <p><span><b>A:</b> You can reach me at <a href="mailto:hello@forestbath.online">hello@forestbath.online</a>. I'd be happy to hear from you!</span></p>
+            <p><span><b>A:</b> You can reach me at <a href="mailto:hello@forestbath.online">hello@forestbath.online</a>.
+                    I'd be happy to hear from you!</span></p>
             <br>
             <br>
             <br>
@@ -191,14 +192,15 @@
                         <span>About</span></a>
                 </li>
                 <li>
-                    <a href="#" id="faq" style="display: none;" onclick="overlayFaqOn(), focusInputFaq()"><span>FAQ</span></a>
+                    <a href="#" id="faq" style="display: none;"
+                        onclick="overlayFaqOn(), focusInputFaq()"><span>FAQ</span></a>
                 </li>
             </ul>
         </div>
         <div class="nav-right">
             <ul>
                 <li>
-                    <a title="Mute or unmute sound" href="#" id="playbutton" style="display: none;" onclick="playz();"
+                    <a title="Mute or unmute sound" href="#" id="playbutton" style="display: none;" onclick="playz(), HelloMobile();"
                         class="soundtoggle mute">
                     </a>
                 </li>
